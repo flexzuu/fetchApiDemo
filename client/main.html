@@ -1,0 +1,22 @@
+<head>
+  <title>API TEST</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> posts}}
+</body>
+
+<template name="posts">
+    <ul>
+    {{#each posts}}
+        {{> post}}
+        {{else}}
+        Loading...
+    {{/each}}
+    </ul>
+</template>
+
+<template name="post">
+    <li>{{title}} - {{body}}</li>
+</template>
